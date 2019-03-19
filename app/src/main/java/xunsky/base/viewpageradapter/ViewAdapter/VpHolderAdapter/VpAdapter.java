@@ -23,14 +23,14 @@ public abstract class VpAdapter<T> extends PagerAdapter {
     public int mLayoutId = -1;
     LayoutInflater mInflater;
 
-    public VpAdapter(Context context, List<T> datas, @LayoutRes int layoutId) {
+    public VpAdapter(Context context, List<T> datas, int layoutId) {
         mContext = context;
         mDatas = datas;
         mLayoutId = layoutId;
         mInflater = LayoutInflater.from(context);
     }
 
-    public VpAdapter(Context context, ArrayList<T> datas, @IdRes int layoutId, ArrayList<CharSequence> titles) {
+    public VpAdapter(Context context, ArrayList<T> datas, int layoutId, ArrayList<CharSequence> titles) {
         mContext = context;
         mDatas = datas;
         mLayoutId = layoutId;

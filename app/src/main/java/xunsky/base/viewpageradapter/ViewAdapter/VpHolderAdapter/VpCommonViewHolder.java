@@ -13,7 +13,7 @@ public class VpCommonViewHolder {
     public VpCommonViewHolder(View convertView) {
         this.convertView = convertView;
     }
-    protected  <T extends View> T findView(@IdRes int id){
+    protected  <T extends View> T findView(int id){
     T t = (T) convertView.findViewById(id);
         if (t==null){
             throw new RuntimeException("找不到该id所表示的view");
@@ -21,17 +21,17 @@ public class VpCommonViewHolder {
         return t;
     }
 
-    public <T extends View> T getView(@IdRes int id){
+    public <T extends View> T getView(int id){
         View v =findView(id);
         return (T) v;
     }
 
-    public TextView setText(@IdRes int resId,CharSequence string){
+    public TextView setText(int resId,CharSequence string){
         TextView tv = getView(resId);
         tv.setText(string);
         return tv;
     }
-    public TextView setText(@IdRes int resId){
+    public TextView setText(int resId){
         TextView tv = getView(resId);
         return tv;
     }
